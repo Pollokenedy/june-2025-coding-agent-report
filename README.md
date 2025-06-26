@@ -6,6 +6,10 @@
 
 A comprehensive evaluation of 15 AI coding agents across IDE, CLI, Full-Stack, and Hybrid platforms, analyzing their usability, output quality, and professional viability.
 
+## 📄 Quick Access
+
+**📊 [Download Complete PDF Report](june-2025-coding-agents.pdf)** - Full 60-page evaluation with detailed analysis, scoring matrices, and professional recommendations
+
 ## Overview
 
 This repository contains the complete June 2025 coding agent evaluation, including the original report, source materials, and implementation examples from each tested agent.
