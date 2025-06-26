@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= idea.title %></title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <h1><%= idea.title %></h1>
+  <p>Votes: <%= idea.votes %></p>
+  <form method="post" action="/ideas/<%= idea.id %>/vote">
+    <button type="submit">Vote</button>
+  </form>
+  <a href="/">Back to list</a>
+  <h2>Notes</h2>
+  <ul>
+    <% idea.notes.forEach(function(note) { %>
+      <li>
+        <p><%= note.text %></p>
+        <p><small><%= note.createdAt %></small></p>
+        <% if (note.attachments && note.attachments.length) { %>
+          <ul>
+            <% note.attachments.forEach(function(att) { %>
+              <li><a href="/uploads/<%= att.filename %>"><%= att.originalname %></a></li>
+            <% }); %>
+          </ul>
+        <% } %>
+      </li>
+    <% }); %>
+  </ul>
+  <form method="post" action="/ideas/<%= idea.id %>/notes" enctype="multipart/form-data">
+    <textarea name="text" placeholder="Note" required></textarea><br>
+    <input type="file" name="attachments" multiple><br>
+    <button type="submit">Add Note</button>
+  </form>
+</body>
+</html>

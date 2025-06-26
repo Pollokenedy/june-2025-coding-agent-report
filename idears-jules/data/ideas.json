@@ -1,0 +1,29 @@
+[
+  {
+    "id": "attachment-test-id",
+    "text": "Attachment Idea",
+    "votes": 0,
+    "notes": [],
+    "attachments": [],
+    "createdAt": "2025-06-05T15:39:55.986Z",
+    "updatedAt": "2025-06-05T15:39:55.986Z"
+  },
+  {
+    "id": "5a28263a-f02e-4c0a-969c-263d580ae392",
+    "text": "This is an idea",
+    "votes": 3,
+    "notes": [
+      "asdfasdf"
+    ],
+    "attachments": [
+      {
+        "filename": "new_avatar.jpeg",
+        "filepath": "/Users/wschenk/The-Focus-AI/idears-jules/data/uploads/572d16f3-cf37-42d7-acb1-9aeb7b6d9d66-new_avatar.jpeg",
+        "mimetype": "image/jpeg",
+        "size": 20456
+      }
+    ],
+    "createdAt": "2025-06-05T17:52:23.399Z",
+    "updatedAt": "2025-06-05T17:52:46.591Z"
+  }
+]

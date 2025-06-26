@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Idea Collector</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    form { margin-bottom: 20px; }
+    .idea { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    button { margin-left: 5px; }
+  </style>
+</head>
+<body>
+<h1>Ideas</h1>
+<form id="ideaForm">
+  <input type="text" name="title" placeholder="Idea title" required>
+  <textarea name="notes" placeholder="Notes"></textarea>
+  <input type="file" name="files" multiple>
+  <button type="submit">Add Idea</button>
+</form>
+<div id="ideas"></div>
+<script>
+async function loadIdeas() {
+  const res = await fetch('/ideas');
+  const ideas = await res.json();
+  const container = document.getElementById('ideas');
+  container.innerHTML = '';
+  ideas.forEach(i => {
+    const div = document.createElement('div');
+    div.className = 'idea';
+    div.innerHTML = `<strong>${i.title}</strong> (votes: ${i.votes})<br>${i.notes || ''}`;
+    const btn = document.createElement('button');
+    btn.textContent = 'Vote';
+    btn.onclick = async () => {
+      await fetch('/ideas/' + i.id + '/vote', {method: 'POST'});
+      loadIdeas();
+    };
+    div.appendChild(btn);
+    container.appendChild(div);
+  });
+}
+
+document.getElementById('ideaForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  await fetch('/ideas', {method: 'POST', body: formData});
+  e.target.reset();
+  loadIdeas();
+});
+
+loadIdeas();
+</script>
+</body>
+</html>

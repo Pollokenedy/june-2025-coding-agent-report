@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Collector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Idea Collector</h1>
+        
+        <div class="new-idea-form">
+            <h2>Add New Idea</h2>
+            <form id="ideaForm">
+                <input type="text" id="title" placeholder="Idea Title" required>
+                <textarea id="description" placeholder="Description"></textarea>
+                <button type="submit">Add Idea</button>
+            </form>
+        </div>
+
+        <div class="ideas-list">
+            <h2>Ideas</h2>
+            <div id="ideas"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

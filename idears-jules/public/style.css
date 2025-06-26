@@ -1,0 +1,105 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#new-idea-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#new-idea-form button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#new-idea-form button:hover {
+    background-color: #4cae4c;
+}
+
+#ideas-container {
+    margin-top: 20px;
+}
+
+.idea {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.idea h3 {
+    margin-top: 0;
+    color: #0275d8;
+}
+
+.idea p {
+    margin-bottom: 5px;
+}
+
+.idea .meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.idea .actions button, .idea .actions input[type="text"], .idea .actions input[type="file"] {
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.idea .actions button {
+    background-color: #0275d8;
+    color: white;
+    cursor: pointer;
+}
+
+.idea .actions button:hover {
+    background-color: #025aa5;
+}
+
+.idea .notes-section, .idea .attachments-section {
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 3px solid #eee;
+}
+
+.idea .notes-section h4, .idea .attachments-section h4 {
+    margin-bottom: 5px;
+}
+
+.idea .notes-section ul, .idea .attachments-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.idea .notes-section ul li, .idea .attachments-section ul li {
+    font-size: 0.95em;
+}
+
+.idea .attachments-section a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+.idea .attachments-section a:hover {
+    text-decoration: underline;
+}

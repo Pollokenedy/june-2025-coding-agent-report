@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 1em;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+button {
+  padding: 0.5em 1em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5em;
+}

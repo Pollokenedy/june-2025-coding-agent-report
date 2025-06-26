@@ -1,0 +1,203 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.idea-form, .ideas-list {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 18px);
+}
+
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#ideas-ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ideas-ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ideas-ul li .idea-content {
+    flex-grow: 1;
+}
+
+#ideas-ul li .idea-actions button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.vote-button {
+    background-color: #28a745;
+}
+
+.vote-button:hover {
+    background-color: #1e7e34;
+}
+
+.notes-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.notes-button:hover {
+    background-color: #e0a800;
+}
+
+.votes-count {
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.idea-meta {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.idea-meta p {
+    margin: 3px 0;
+}
+
+.attachments-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.attachments-list li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.attachments-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-notes-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#modal-notes-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}

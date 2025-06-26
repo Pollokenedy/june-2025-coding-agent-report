@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.new-idea-form, .ideas-list {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.idea-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.votes {
+    color: #ff4444;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.idea-content {
+    flex: 1;
+}
+
+.notes {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+
+.note-item {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: white;
+    border-radius: 4px;
+}
+
+.note-item:last-child {
+    margin-bottom: 0;
+}
+
+.attachment {
+    margin-top: 5px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.attachment:hover {
+    text-decoration: underline;
+}

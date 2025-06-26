@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idea Collection</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    .idea { border: 1px solid #ccc; padding: 1em; margin-bottom: 1em; }
+    .files { margin-top: 0.5em; }
+    .files a { margin-right: 0.5em; }
+    .vote-btn { margin-left: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Idea Collection</h1>
+  <form id="add-idea-form">
+    <input type="text" id="title" placeholder="Idea title" required />
+    <input type="text" id="notes" placeholder="Notes (optional)" />
+    <button type="submit">Add Idea</button>
+  </form>
+  <h2>Ideas</h2>
+  <div id="ideas"></div>
+  <script>
+    async function fetchIdeas() {
+      const res = await fetch('/ideas');
+      const ideas = await res.json();
+      const ideasDiv = document.getElementById('ideas');
+      ideasDiv.innerHTML = '';
+      ideas.forEach(idea => {
+        const div = document.createElement('div');
+        div.className = 'idea';
+        div.innerHTML = `
+          <strong>${idea.title}</strong> <span>(Votes: ${idea.votes})</span>
+          <button class="vote-btn" onclick="voteIdea('${idea.id}')">Vote</button>
+          <br />
+          <textarea id="notes-${idea.id}" rows="2" cols="40">${idea.notes || ''}</textarea>
+          <button onclick="updateNotes('${idea.id}')">Save Notes</button>
+          <form onsubmit="return uploadFile(event, '${idea.id}')">
+            <input type="file" id="file-${idea.id}" />
+            <button type="submit">Upload File</button>
+          </form>
+          <div class="files">
+            ${(idea.files || []).map(f => `<a href="${f.url}" target="_blank">${f.filename}</a>`).join(' ')}
+          </div>
+        `;
+        ideasDiv.appendChild(div);
+      });
+    }
+    async function voteIdea(id) {
+      await fetch(`/ideas/${id}/vote`, { method: 'POST' });
+      fetchIdeas();
+    }
+    async function updateNotes(id) {
+      const notes = document.getElementById(`notes-${id}`).value;
+      await fetch(`/ideas/${id}/notes`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ notes })
+      });
+      fetchIdeas();
+    }
+    async function uploadFile(event, id) {
+      event.preventDefault();
+      const input = document.getElementById(`file-${id}`);
+      if (!input.files.length) return;
+      const formData = new FormData();
+      formData.append('file', input.files[0]);
+      await fetch(`/ideas/${id}/files`, { method: 'POST', body: formData });
+      fetchIdeas();
+    }
+    document.getElementById('add-idea-form').onsubmit = async (e) => {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const notes = document.getElementById('notes').value;
+      await fetch('/ideas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, notes })
+      });
+      document.getElementById('title').value = '';
+      document.getElementById('notes').value = '';
+      fetchIdeas();
+    };
+    fetchIdeas();
+  </script>
+</body>
+</html> 

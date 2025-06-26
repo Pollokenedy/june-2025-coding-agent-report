@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idears - Collect Your Ideas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Idears</h1>
+        <div class="idea-form">
+            <h2>Add a New Idea</h2>
+            <form id="new-idea-form" enctype="multipart/form-data">
+                <textarea id="idea-text" placeholder="Enter your idea..." required></textarea>
+                <div class="form-group">
+                    <label for="idea-attachments">Attach Files (optional):</label>
+                    <input type="file" id="idea-attachments" name="attachments" multiple>
+                </div>
+                <button type="submit">Add Idea</button>
+            </form>
+        </div>
+
+        <div class="ideas-list">
+            <h2>Existing Ideas</h2>
+            <ul id="ideas-ul">
+                <!-- Ideas will be populated here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for adding notes -->
+    <div id="notes-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-idea-text"></h3>
+            <h4>Add a Note</h4>
+            <form id="add-note-form">
+                <textarea id="note-text" placeholder="Enter your note..." required></textarea>
+                <input type="hidden" id="modal-idea-id">
+                <button type="submit">Add Note</button>
+            </form>
+            <h4>Existing Notes</h4>
+            <ul id="modal-notes-list">
+                <!-- Notes will be populated here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

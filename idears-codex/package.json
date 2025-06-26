@@ -1,0 +1,27 @@
+{
+  "name": "ideas-app",
+  "version": "1.0.0",
+  "description": "Simple web application for collecting and voting on ideas.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "NODE_ENV=test jest --runInBand"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "multer": "^1.4.4",
+    "ejs": "^3.1.6",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "supertest": "^6.0.1",
+    "nodemon": "^2.0.7"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
+}
