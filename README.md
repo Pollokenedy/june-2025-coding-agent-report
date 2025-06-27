@@ -1,14 +1,7 @@
 # June 2025 Coding Agent Report
 
-> **📖 Read the full report published on Turing Post:**  
-> **[🦸🏻#20: What Coding Agent Wins?](https://www.turingpost.com/p/codingreport)**  
-> *A hands-on comparison of 15 AI coding tools across IDEs, CLIs, full-stack agents, and hybrid platforms*
 
-A comprehensive evaluation of 15 AI coding agents across IDE, CLI, Full-Stack, and Hybrid platforms, analyzing their usability, output quality, and professional viability.
-
-## 📄 Quick Access
-
-**📊 [Download Complete PDF Report](june-2025-coding-agents.pdf)** - Full 60-page evaluation with detailed analysis, scoring matrices, and professional recommendations
+Below is a summary of my discoveries, but if you want to dive into the full details [you can download the 61-page report here](https://www.turingpost.com/c/coding-agents-2025).
 
 ## Overview
 
@@ -174,13 +167,13 @@ The landscape is rapidly evolving. By summer 2025, we expect:
 
 ## Related Resources
 
-- 📰 **[Full Turing Post Article](https://www.turingpost.com/p/codingreport)** - Published coverage with additional insights
+- 📰 **[Full Turing Post Article](https://www.turingpost.com/c/coding-agents-2025)** - Published coverage with additional insights
 - 📝 **[Don't Be Passive Aggressive Blog Post](https://thefocus.ai/posts/dont-be-passive-aggressive/)** - Companion article on agent collaboration
 - 📸 **[Screenshots Gallery](SCREENSHOTS.md)** - Visual showcase of all implementations
 - 🎯 **[TheFocus.AI](https://thefocus.ai)** - More AI development insights and tools
 
 ---
 
-*Report authors: Will Schenk & Ksenia Se  
+*Report authors: Will Schenk/TheFocus.AI
 Published on Turing Post: June 21, 2025  
 Original evaluation: June 2025*
