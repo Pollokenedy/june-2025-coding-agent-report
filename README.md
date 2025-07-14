@@ -1,7 +1,8 @@
 # June 2025 Coding Agent Report
 
+📄 **[Download the Full Report (PDF)](june-2025-coding-agents.pdf)** - Complete 61-page evaluation with detailed analysis
 
-Below is a summary of my discoveries, but if you want to dive into the full details [you can download the 61-page report here](https://www.turingpost.com/c/coding-agents-2025).
+Below is a summary of my discoveries, but if you want to dive into the full details [you can also read it on Turing Post](https://www.turingpost.com/c/coding-agents-2025).
 
 ## Overview
 
@@ -119,7 +120,7 @@ Document development practices in your repo:
 ## Repository Contents
 
 ### Reports
-- `june-2025-coding-agents.pdf` - Complete formatted report
+- **[june-2025-coding-agents.pdf](june-2025-coding-agents.pdf)** - Complete formatted report (61 pages)
 - `june-2025-coding-agents.md` - Source markdown
 
 ### Visual Gallery
